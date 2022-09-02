@@ -1,0 +1,13 @@
+.v-app-bar {
+  z-index: 101 !important;
+}
+.v-navigation-drawer.v-navigation-drawer--absolute {
+  margin-top: 60px;
+  background-color: #e0f2f1;
+}
+.v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {
+  box-shadow: none !important;
+}
+.v-navigation-drawer__content {
+  margin-top: 65px;
+}

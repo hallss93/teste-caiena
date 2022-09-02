@@ -1,0 +1,47 @@
+<v-app class="body-light">
+  <p class="ma-0 py-3 text-center deep-purple lighten-4">Cadastro de aluno</p>
+  <v-container class="mt-10">
+    <v-form ref="form">
+      <v-row justify="space-between">
+        <v-col cols="12" md="6">
+          <v-text-field
+            v-model="name"
+            :rules="rules.name"
+            label="Informe o Nome Completo"
+          ></v-text-field>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-text-field
+            v-model="email"
+            :rules="rules.email"
+            label="Informe apenas um e-mail"
+          ></v-text-field>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-text-field
+            v-model="ra"
+            type="number"
+            :rules="rules.ra"
+            label="Informe o Registro Acadêmico"
+          ></v-text-field>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-text-field
+            v-model="cpf"
+            :rules="rules.cpf"
+            label="Informe o número do documento"
+            v-mask="'###.###.###-##'"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="d-flex justify-end">
+          <v-btn class="mr-3" @click="$router.push('/')">Cancelar</v-btn>
+          <v-btn color="primary" @click="save()"
+            >{{ id !== 0 ? "Atualizar" : "Salvar" }}</v-btn
+          >
+        </v-col>
+      </v-row>
+    </v-form>
+  </v-container>
+</v-app>
